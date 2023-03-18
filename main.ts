@@ -43,9 +43,10 @@ input.onGesture(Gesture.Shake,function(){
        #...# `)
         } // if tot hier
 
-    startTijd=input.runningTime()
+    startTijd=input.runningTime()//tijd van de start van programma
 
 while(opKnopGedrukt==false){
+    //starttijd van het programma-destarttijd spel moet kleiner zijn dan 1sec
     if(input.runningTime()- startTijd>1000) {
         game.gameOver()
     }  //if tot hier
@@ -97,5 +98,5 @@ while(opKnopGedrukt==false){
 })  //einde functie
 
 basic.forever(function () {
-	
+	input.runningTime()
 })
