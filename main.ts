@@ -1,5 +1,6 @@
-let startTijd=0
+
 //alle variabelen
+let startTijd = 0
 let opKnopGedrukt=false
 let posititieMol=0
 let spelBezig =false
@@ -9,11 +10,11 @@ input.onGesture(Gesture.Shake,function(){
     basic.showString("3,2,1") //toon 
     spelBezig =true //ja spel is bezig
     //terwijl het spel begonnen is ,geef een radom getal tussen (0,1
-    //
+    
     while (spelBezig ==true){
         posititieMol =Math.randomRange(0,2)
-    opKnopGedrukt=false
-    basic.pause(300)  //om de 300msec begin opnieuw
+        opKnopGedrukt=false  //men heeft niet op de knop gedrukt
+        basic.pause(300)  //om de 300msec begin opnieuw
 
 //alt µ £`` toets rechts onder
     if(posititieMol==0){
@@ -49,7 +50,7 @@ while(opKnopGedrukt==false){
         game.gameOver()
     }  //if tot hier
     
-//als 
+//als je op de juiste knop drukt zie je een vinkje yes andrs game over
     if (posititieMol==0 && input.buttonIsPressed(Button.A)){
         opKnopGedrukt=true
         basic.showIcon(IconNames.Yes)
